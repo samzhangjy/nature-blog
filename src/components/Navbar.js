@@ -26,7 +26,8 @@ export default function Navbar() {
           footer={
             <Space>
               <Button style={{ marginRight: 0 }} theme='borderless' onClick={() => navigate("/")}>首页</Button>
-              <Button style={{ marginRight: 0 }} theme='borderless'>关于我们</Button>
+              <Button style={{ marginRight: 0 }} theme='borderless' onClick={() => navigate("/posts")}>文章</Button>
+              <Button style={{ marginRight: 0 }} theme='borderless' onClick={() => navigate("/about")}>关于</Button>
             </Space>
           }
           className="w-full"

@@ -33,6 +33,7 @@ const SemiWebpackPlugin = require("@douyinfe/semi-webpack-plugin").default;
 
 const MarkdownItGithub = require('markdown-it-github');
 const markdownIt = require('markdown-it');
+const markdownItHighlightjs = require("markdown-it-highlightjs");
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
@@ -553,7 +554,7 @@ module.exports = function (webpackEnv) {
               loader: 'frontmatter-markdown-loader',
               options: {
                 mode: [Mode.REACT],
-                markdownIt: markdownIt({ html: true, xhtmlOut: true })
+                markdownIt: markdownIt({ html: true, xhtmlOut: true }).use(markdownItHighlightjs, { inline: true })
               }
             },
             // "file" loader makes sure those assets get served by WebpackDevServer.

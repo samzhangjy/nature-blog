@@ -25,7 +25,7 @@ body[theme-mode=dark] {
 }
 
 .container {
-  padding: 30px;
+  padding: 50px;
 }
 
 .overflow-auto {
@@ -51,6 +51,7 @@ body[theme-mode=dark] {
 hr {
   border: 1px solid #eee;
   margin: 30px 0px 30px 0px;
+  width: 100%;
 }
 
 [theme-mode="dark"] hr {
@@ -60,5 +61,28 @@ hr {
 
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
+}
+
+.hljs {
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.hljs:hover {
+  box-shadow: 0px 3px 5px #eee;
+}
+
+[theme-mode="dark"] .hljs:hover {
+  box-shadow: 0px 3px 5px #17181b;
+}
+
+@media screen and (max-width: 480px) {
+  .semi-navigation-header-text {
+    display: none !important;
+  }
+
+  .container {
+    padding: 30px;
+  }
 }

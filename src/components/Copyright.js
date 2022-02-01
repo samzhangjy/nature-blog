@@ -6,15 +6,16 @@ export default function Copyright() {
   return (
     <div className="footer">
       <Text>
-        &copy; 2022{" "}
+        &copy; {new Date().getFullYear()}{" "}
         <Text
           link={{
-            href: "https://space.bilibili.com/522408191",
+            href: "https://github.com/samzhangjy",
             target: "_blank",
           }}
         >
           @samzhangjy
-        </Text>
+        </Text>{" "}
+        for Nature Studio
       </Text>
     </div>
   );
